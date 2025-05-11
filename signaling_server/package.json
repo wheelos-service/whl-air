@@ -1,0 +1,23 @@
+{
+  "name": "whl-air-signaling-server",
+  "version": "1.0.0",
+  "description": "WebRTC signaling server for whl-air remote driving system",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "ws": "^8.0.0",             // Fast WebSocket library
+    "jsonwebtoken": "^9.0.0"  // For JWT verification
+    // Add a config library if needed, e.g., 'config' or handle via env vars
+  },
+  "keywords": [
+    "webrtc",
+    "signaling",
+    "websocket",
+    "nodejs",
+    "autonomous-driving"
+  ],
+  "author": "Your Name",
+  "license": "UNLICENSED"
+}

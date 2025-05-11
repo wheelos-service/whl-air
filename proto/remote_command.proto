@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package autodev.remote.control;
+
+enum EmergencyType {
+    EMERGENCY_TYPE_UNKNOWN = 0;
+    EMERGENCY_STOP = 1; // Immediate halt
+    PULL_OVER = 2;      // Safely pull over to the side
+    // ... other emergency types
+}
+
+message EmergencyCommand {
+    EmergencyType type = 1;
+    // Optional: additional parameters for the command
+    string reason = 2;
+}

@@ -1,0 +1,106 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1, h2 {
+  color: #0056b3;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Space between flex items */
+  margin-bottom: 20px;
+}
+
+.video-container {
+  flex: 2; /* Allows video to take up more space */
+  min-width: 320px; /* Minimum size */
+  position: relative; /* For overlay status */
+  background-color: #000;
+  border: 1px solid #ccc;
+}
+
+#vehicleVideo {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below video */
+}
+
+.status-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.status-panel {
+  flex: 1; /* Allows status panel to take remaining space */
+  min-width: 250px; /* Minimum size */
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.status-panel p {
+  margin: 8px 0;
+}
+
+.controls {
+  flex: 1;
+  min-width: 250px;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.controls button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+}
+
+.controls button:hover {
+  background-color: #0056b3;
+}
+
+#btnEmergencyStop {
+  background-color: #dc3545;
+}
+#btnEmergencyStop:hover {
+  background-color: #c82333;
+}
+
+.log-area {
+  width: 100%;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin-top: 20px;
+}
+
+#logContent {
+  white-space: pre-wrap; /* Preserve whitespace and wrap text */
+  word-wrap: break-word;
+  max-height: 200px; /* Limit log height */
+  overflow-y: auto; /* Add scrollbar if content overflows */
+  margin: 0;
+  padding: 0;
+}

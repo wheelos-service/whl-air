@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Driving Cockpit</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Remote Driving Cockpit</h1>
+
+    <div class="container">
+        <div id="videoContainer" class="video-container">
+            <video id="vehicleVideo" autoplay playsinline controls muted></video>
+            <div id="connectionStatus" class="status-overlay">Connecting...</div>
+        </div>
+
+        <div id="statusPanel" class="status-panel">
+            <h2>Vehicle Status</h2>
+            <p>Speed: <span id="speed">--</span> m/s</p>
+            <p>Gear: <span id="gear">--</span></p>
+            <p>Telemetry Status: <span id="telemetryStatus">Disconnected</span></p>
+        </div>
+
+        <div id="controls" class="controls">
+            <h2>Controls</h2>
+            <button id="btnForward">Forward (Sim)</button>
+            <button id="btnStop">Stop (Sim)</button>
+            <button id="btnEmergencyStop">!!! EMERGENCY STOP !!!</button>
+            <div id="controlStatus">Control Status: Ready</div>
+        </div>
+    </div>
+
+    <div id="log" class="log-area">
+        <h2>Log</h2>
+        <pre id="logContent"></pre>
+    </div>
+
+
+    <script src="js/status_panel.js"></script>
+    <script src="js/video_player.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
